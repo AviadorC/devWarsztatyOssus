@@ -1,6 +1,8 @@
 using MvvmCross.Binding.BindingContext;
 using MvvmCross.iOS.Views;
 using MvvmCross.iOS.Views.Presenters.Attributes;
+using Ossus.iOS.Source;
+using UIKit;
 
 namespace Ossus.iOS.Views
 {
@@ -15,9 +17,14 @@ namespace Ossus.iOS.Views
         {
             base.ViewDidLoad();
 
-            var set = this.CreateBindingSet<MainView, Core.ViewModels.MainViewModel>();
-            set.Bind(TextField).To(vm => vm.Text);
-            set.Bind(Button).To(vm => vm.ResetTextCommand);
+            var _source = new CharacterSource(CharactersTableView);
+            CharactersTableView.Source = _source;
+
+            CharactersTableView.RowHeight = UITableView.AutomaticDimension;
+            CharactersTableView.EstimatedRowHeight = 44f;
+
+            var set = this.CreateBindingSet<MainView, ViewModels.MainViewModel>();
+            set.Bind(_source).For(v => v.ItemsSource).To(vm => vm.Characters);
             set.Apply();
         }
     }

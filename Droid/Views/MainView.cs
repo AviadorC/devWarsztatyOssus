@@ -4,7 +4,7 @@ using MvvmCross.Droid.Views;
 
 namespace Ossus.Droid.Views
 {
-    [Activity(Label = "View for MainViewModel")]
+    [Activity(Label = "Star Wars Characters")]
     public class MainView : MvxActivity
     {
         protected override void OnCreate(Bundle bundle)

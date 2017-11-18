@@ -11,7 +11,7 @@ namespace Ossus
                 .AsInterfaces()
                 .RegisterAsLazySingleton();
 
-            RegisterAppStart<ViewModels.MainViewModel>();
+            RegisterNavigationServiceAppStart<ViewModels.MainViewModel>();
         }
     }
 }

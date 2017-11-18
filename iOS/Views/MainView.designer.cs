@@ -1,38 +1,26 @@
 // WARNING
 //
-// This file has been generated automatically by Xamarin Studio from the outlets and
-// actions declared in your storyboard file.
-// Manual changes to this file will not be maintained.
+// This file has been generated automatically by Visual Studio to store outlets and
+// actions made in the UI designer. If it is removed, they will be lost.
+// Manual changes to this file may not be handled correctly.
 //
 using Foundation;
-using System;
 using System.CodeDom.Compiler;
-using UIKit;
 
 namespace Ossus.iOS.Views
 {
-    [Register ("MainView")]
-    partial class MainView
-    {
-        [Outlet]
-        [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UIButton Button { get; set; }
-
-        [Outlet]
-        [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UITextField TextField { get; set; }
-
-        void ReleaseDesignerOutlets ()
-        {
-            if (Button != null) {
-                Button.Dispose ();
-                Button = null;
-            }
-
-            if (TextField != null) {
-                TextField.Dispose ();
-                TextField = null;
-            }
-        }
-    }
+	[Register ("MainView")]
+	partial class MainView
+	{
+		[Outlet]
+		UIKit.UITableView CharactersTableView { get; set; }
+		
+		void ReleaseDesignerOutlets ()
+		{
+			if (CharactersTableView != null) {
+				CharactersTableView.Dispose ();
+				CharactersTableView = null;
+			}
+		}
+	}
 }
