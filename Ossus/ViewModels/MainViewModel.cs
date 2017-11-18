@@ -22,13 +22,6 @@ namespace Ossus.ViewModels
 
         public IMvxCommand<Character> CharacterSelected { get; private set; } 
 
-        private string _text = "Hello MvvmCross";
-        public string Text
-        {
-            get { return _text; }
-            set { SetProperty(ref _text, value); }
-        }
-
         private MvxObservableCollection<Character> _characters;
         public MvxObservableCollection<Character> Characters
         {
